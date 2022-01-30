@@ -14,11 +14,8 @@ class CardViewAdapter() :
 
     class CardViewHolder(private val binding: ItemCardviewBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(card: CardInfo) {
-            Glide.with(binding.root)
-                .load(card.image)
-                .into(binding.ivDice)
-            binding.card = card
+        fun bind(cardInfo: CardInfo) {
+            binding.card = cardInfo
         }
     }
 
