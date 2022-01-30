@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinStudy">
         <activity
-            android:name=".CalculateActivity"
+            android:name=".CardActivity"
             android:exported="false" />
+        <activity
+            android:name=".CalculateActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
