@@ -1,5 +1,6 @@
 package com.example.kotlinstudy
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +26,10 @@ class MainActivity : AppCompatActivity() {
     private fun clickEvent() {
         binding.btnRoll.setOnClickListener {
             rollDice()
+        }
+        binding.btnNext.setOnClickListener {
+            val intent = Intent(this, CardActivity::class.java)
+         startActivity(intent)
         }
     }
 

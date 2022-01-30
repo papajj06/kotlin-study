@@ -18,6 +18,7 @@ class CardViewAdapter() :
             Glide.with(binding.root)
                 .load(card.image)
                 .into(binding.ivDice)
+            binding.card = card
         }
     }
 
@@ -42,6 +43,7 @@ class CardViewAdapter() :
             newItem: CardInfo
         ) =
             (oldItem.image == newItem.image)
+
 
         override fun areContentsTheSame(
             oldItem: CardInfo,
