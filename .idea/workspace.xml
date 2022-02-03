@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be6028cf-6b4b-4640-af1c-0f75d55eb65c" name="Default Changelist" comment="" />
+    <list default="true" id="4873ed54-e11e-4d6e-a082-43977c0f23bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/java/com/example/kotlinstudy/GameActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/java/com/example/kotlinstudy/GameFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/layout/activity_game.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/layout/fragment_game.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/navigation/nav_graph2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlin-study.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AndroidStudy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidStudy/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AndroidStudy/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="24JpRTIaQPGlRUNI4JkDTuWgrHA" />
+  <component name="ProjectId" id="24aobgv2cdG3DCmosy0pme3se7x" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -20,16 +38,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="D:/android/sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/AndroidStudy" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="be6028cf-6b4b-4640-af1c-0f75d55eb65c" name="Default Changelist" comment="" />
-      <created>1643358543174</created>
+      <changelist id="4873ed54-e11e-4d6e-a082-43977c0f23bd" name="Default Changelist" comment="" />
+      <created>1643878135427</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1643358543174</updated>
+      <updated>1643878135427</updated>
     </task>
     <servers />
   </component>

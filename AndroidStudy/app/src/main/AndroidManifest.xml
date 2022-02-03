@@ -10,11 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinStudy">
         <activity
+            android:name=".GameActivity"
+            android:exported="false"
+            android:label="@string/title_activity_game"
+            android:theme="@style/Theme.KotlinStudy.NoActionBar" />
+        <activity
             android:name=".CardActivity"
             android:exported="false" />
         <activity
             android:name=".CalculateActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

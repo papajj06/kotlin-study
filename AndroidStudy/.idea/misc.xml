@@ -8,7 +8,10 @@
         <entry key="..\:/AndroidStudy/app/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="..\:/kotlin-study/AndroidStudy/app/src/main/res/layout/activity_calculate.xml" value="0.22" />
         <entry key="..\:/kotlin-study/AndroidStudy/app/src/main/res/layout/activity_card.xml" value="0.17916666666666667" />
+        <entry key="..\:/kotlin-study/AndroidStudy/app/src/main/res/layout/activity_game.xml" value="0.19418676561533704" />
         <entry key="..\:/kotlin-study/AndroidStudy/app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
+        <entry key="..\:/kotlin-study/AndroidStudy/app/src/main/res/layout/content_game.xml" value="0.10666666666666667" />
+        <entry key="..\:/kotlin-study/AndroidStudy/app/src/main/res/layout/fragment_game.xml" value="0.13333333333333333" />
         <entry key="..\:/kotlin-study/AndroidStudy/app/src/main/res/layout/item_cardview.xml" value="0.14666666666666667" />
       </map>
     </option>
