@@ -1,18 +1,20 @@
-package com.example.kotlinstudy
+package com.example.kotlinstudy.game
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat
+import com.example.kotlinstudy.R
 import com.example.kotlinstudy.databinding.FragmentGameBinding
+import androidx.fragment.app.viewModels
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
+class GameFragment : Fragment() {
 
- class GameFragment : Fragment() {
-
-    private var score = 0
-    private var currentWordCount = 0
-    private var currentScrambledWord = "test"
+    private val viewModel: GameViewModel by viewModels()
 
     private lateinit var binding: FragmentGameBinding
 
@@ -29,63 +31,58 @@ import com.example.kotlinstudy.databinding.FragmentGameBinding
 
         binding.submit.setOnClickListener { onSubmitWord() }
         binding.skip.setOnClickListener { onSkipWord() }
-        // Update the UI
         updateNextWordOnScreen()
         binding.score.text = getString(R.string.score, 0)
         binding.wordCount.text = getString(
-            R.string.word_count, 0, MAX_NO_OF_WORDS)
+            R.string.word_count, 0, MAX_NO_OF_WORDS
+        )
     }
 
     private fun onSubmitWord() {
-        currentScrambledWord = getNextScrambledWord()
-        currentWordCount++
-        score += SCORE_INCREASE
-        binding.wordCount.text = getString(R.string.word_count, currentWordCount, MAX_NO_OF_WORDS)
-        binding.score.text = getString(R.string.score, score)
-        setErrorTextField(false)
-        updateNextWordOnScreen()
+        val playerWord = binding.textInputEditText.text.toString()
+
+        if (viewModel.isUserWordCorrect(playerWord)) { //뷰모델에 있는 함수 사용 , 제출 시 단어가 맞는지 확인여부 함수
+            setErrorTextField(false) //만약 true이면 오류 메시지 안나타남
+            if (viewModel.nextWord()) { //다음 단어 보여주기기
+                updateNextWordOnScreen()
+            } else {
+                showFinalScoreDialog()
+            }
+        } else {
+            setErrorTextField(true)
+        }
     }
 
-    /*
-     * Skips the current word without changing the score.
-     * Increases the word count.
-     */
     private fun onSkipWord() {
-        currentScrambledWord = getNextScrambledWord()
-        currentWordCount++
-        binding.wordCount.text = getString(R.string.word_count, currentWordCount, MAX_NO_OF_WORDS)
-        setErrorTextField(false)
-        updateNextWordOnScreen()
+        if (viewModel.nextWord()) {
+            setErrorTextField(false)
+            updateNextWordOnScreen()
+        } else {
+            showFinalScoreDialog()
+        }
     }
 
-    /*
-     * Gets a random word for the list of words and shuffles the letters in it.
-     */
     private fun getNextScrambledWord(): String {
         val tempWord = allWordsList.random().toCharArray()
         tempWord.shuffle()
         return String(tempWord)
     }
 
-    /*
-     * Re-initializes the data in the ViewModel and updates the views with the new data, to
-     * restart the game.
-     */
     private fun restartGame() {
+        viewModel.reinitializeData()
         setErrorTextField(false)
         updateNextWordOnScreen()
     }
 
-    /*
-     * Exits the game.
-     */
     private fun exitGame() {
         activity?.finish()
     }
 
-    /*
-    * Sets and resets the text field error status.
-    */
+    override fun onDetach() {
+        super.onDetach()
+        Log.d("GameFragment", "GameFragment destroyed!")
+    }
+
     private fun setErrorTextField(error: Boolean) {
         if (error) {
             binding.textField.isErrorEnabled = true
@@ -96,10 +93,31 @@ import com.example.kotlinstudy.databinding.FragmentGameBinding
         }
     }
 
-    /*
-     * Displays the next scrambled word on screen.
-     */
     private fun updateNextWordOnScreen() {
-        binding.textViewUnscrambledWord.text = currentScrambledWord
+        binding.textViewUnscrambledWord.text = viewModel.currentScrambledWord
+    }
+
+    private fun showFinalScoreDialog() {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(getString(R.string.congratulations))
+            .setMessage(getString(R.string.you_scored, viewModel.score))
+            .setCancelable(false)
+            .setNegativeButton(getString(R.string.exit)) { _, _ ->
+                exitGame()
+            }
+            .setPositiveButton(getString(R.string.play_again)) { _, _ ->
+                restartGame()
+            }
+            .show()
     }
 }
+
+// 뷰모델 적용 전 함수들
+/*
+private fun onSkipWord() {
+        currentScrambledWord = getNextScrambledWord()
+        currentWordCount++
+        binding.wordCount.text = getString(R.string.word_count, currentWordCount, MAX_NO_OF_WORDS)
+        setErrorTextField(false)
+        updateNextWordOnScreen()
+    }*/
