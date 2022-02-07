@@ -10,11 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinStudy">
         <activity
-            android:name=".CardActivity"
+            android:name=".game.GameActivity"
+            android:exported="true"
+            android:label="@string/title_activity_game"
+            android:theme="@style/Theme.KotlinStudy.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".card.CardActivity"
             android:exported="false" />
         <activity
             android:name=".CalculateActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

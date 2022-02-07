@@ -1,8 +1,8 @@
-package com.example.kotlinstudy
+package com.example.kotlinstudy.card
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.kotlinstudy.databinding.ActivityCalculateBinding
+import com.example.kotlinstudy.R
 import com.example.kotlinstudy.databinding.ActivityCardBinding
 
 class CardActivity : AppCompatActivity() {
