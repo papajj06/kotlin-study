@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4873ed54-e11e-4d6e-a082-43977c0f23bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/java/com/example/kotlinstudy/GameActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/java/com/example/kotlinstudy/GameFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/layout/activity_game.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/layout/fragment_game.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/navigation/nav_graph2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlin-study.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidStudy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidStudy/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidStudy/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidStudy/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlin-study.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +27,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="D:/android/sdk" />
+    <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4873ed54-e11e-4d6e-a082-43977c0f23bd" name="Default Changelist" comment="" />
