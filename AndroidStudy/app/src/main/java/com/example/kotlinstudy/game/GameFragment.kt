@@ -21,7 +21,6 @@ class GameFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        binding = FragmentGameBinding.inflate(inflater, container, false)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game, container, false)
         return binding.root
     }
@@ -35,28 +34,6 @@ class GameFragment : Fragment() {
 
         binding.submit.setOnClickListener { onSubmitWord() }
         binding.skip.setOnClickListener { onSkipWord() }
-//        updateNextWordOnScreen()
-//        binding.score.text = getString(R.string.score, 0)
-//        binding.wordCount.text = getString(
-//            R.string.word_count, 0, MAX_NO_OF_WORDS
-//        )
-        //updateNextWordOnScreen메소드 대신에 livedata로 변경
-        // -> view에 livedata 객체 바인딩해줘서 삭제함.
-//        viewModel.currentScrambledWord.observe(viewLifecycleOwner,
-//            { newWord ->
-//                binding.textViewUnscrambledWord.text = newWord
-//            })
-        //score
-//        viewModel.score.observe(viewLifecycleOwner,
-//            { newScore ->
-//                binding.score.text = getString(R.string.score, newScore)
-//            })
-        //wordCount
-//        viewModel.currentWordCount.observe(viewLifecycleOwner,
-//            { newWordCount ->
-//                binding.wordCount.text =
-//                    getString(R.string.word_count, newWordCount, MAX_NO_OF_WORDS)
-//            })
     }
 
     private fun onSubmitWord() {
@@ -103,10 +80,6 @@ class GameFragment : Fragment() {
             }
         }
 
-//    private fun updateNextWordOnScreen() {
-//        binding.textViewUnscrambledWord.text = viewModel.currentScrambledWord
-//    }
-
         private fun showFinalScoreDialog() {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle(getString(R.string.congratulations))
@@ -121,14 +94,3 @@ class GameFragment : Fragment() {
                 .show()
         }
     }
-
-
-// 뷰모델 적용 전 함수들
-/*
-private fun onSkipWord() {
-        currentScrambledWord = getNextScrambledWord()
-        currentWordCount++
-        binding.wordCount.text = getString(R.string.word_count, currentWordCount, MAX_NO_OF_WORDS)
-        setErrorTextField(false)
-        updateNextWordOnScreen()
-    }*/
